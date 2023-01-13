@@ -1,0 +1,42 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended"
+        //"standard-with-typescript"
+    ],
+    "overrides": [],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "plugins": ["react", "@typescript-eslint"],
+    "settings": {
+        "react": {
+            "version": "18.2.0"
+        }
+    },
+    "rules": {
+        "no-console": "warn", // Essa regra proíbe o uso de console.log() e outras funções de console. Isso pode ser útil para evitar que você deixe comandos de log acidentais no código de produção.
+        "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }], //Essa regra especifica que os arquivos de componente React devem ter a extensão ".tsx" em vez de ".jsx"., e cria uma exeção para a variável React
+        "@typescript-eslint/no-unused-vars": [
+            "warn",
+            {
+                "args": "none",
+                "vars": "local",
+                "ignoreRestSiblings": true,
+                "argsIgnorePattern": "^_",
+                "varsIgnorePattern": "^React$"
+            }
+        ], //essa regra verifica se há variáveis ​​não utilizadas no seu código TypeScript. Isso pode ajudar a manter o código limpo e evitar variáveis ​​desnecessárias.
+        "semi": ["error", "always"], //Essa regra exige que ponto e vírgula sejam adicionados ao final de cada declaração.
+        "quotes": ["warn", "double"], //Essa regra exige que aspas duplas sejam usadas ao invés de aspas simples.
+        "indent": ["warn", 4], //Essa regra exige que todas as linhas dentro de um bloco sejam indentadas com 2 espaços.
+        "eqeqeq": ["error", "always"], //Essa regra requer que o operador de igualdade estrita (===) seja usado ao invés do operador de igualdade comum (==)
+        "curly": ["error", "all"] // Essa regra exige que as declarações if, else e while tenham chaves em torno delas, mesmo quando o corpo tem apenas uma linha.
+    }
+}
