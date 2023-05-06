@@ -1,0 +1,16 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main{
+  width: 100%;
+  background-image: radial-gradient(circle, #890000, #850000, #820001, #7e0101, #7b0101, #7a0202, #790304, #780405, #790608, #7b090a, #7c0c0d, #7e0e0f);
+  height: 100vh;
+}
+
+side-bar{
+  margin: 0;
+  width: 20vw;
+}
